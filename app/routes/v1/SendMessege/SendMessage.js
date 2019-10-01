@@ -5,7 +5,7 @@ var app = express();
 const sgMail = require('@sendgrid/mail');
 require('dotenv').config();
 
-sgMail.setApiKey('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');
+sgMail.setApiKey('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');
 
 app.set('secret', process.env.JWT_SECRET);
 

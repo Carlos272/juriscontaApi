@@ -11,8 +11,7 @@ var SendMenssageSchema = new Schema({
     },
     LastName: {
         type: String,
-        required: true,
-        unique: true
+        required: true
     },
     ContactNumber: {
         type: String,
