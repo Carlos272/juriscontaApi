@@ -5,7 +5,7 @@ var app = express();
 const sgMail = require('@sendgrid/mail');
 require('dotenv').config();
 
-sgMail.setApiKey('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');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.set('secret', process.env.JWT_SECRET);
 
@@ -22,7 +22,7 @@ router.post('/', function (req, res) {
     });
     const msg = {
         to: 'juriscontaasesorescontables@gmail.com',
-        from: 'web-no-reply@juriscontasesores.com',
+        from: 'web-no-reply@jurisconta.com',
         subject: menssage.Subject,
         text: 'Notificación de registro',
         html: '<p>¡ Este mensaje ha sido enviado por : <strong>' + menssage.Name + '  ' + menssage.LastName + `</strong>!</p> 
